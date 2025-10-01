@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Kiswendsida Ulrich OUEDRAOGO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .header-left {
+            flex: 1;
+        }
+
+        .header-left h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .header-left .title {
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-top: 5px;
+        }
+
+        .header-right {
+            flex: 0.8;
+            text-align: right;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-info i {
+            width: 18px;
+            text-align: center;
+        }
+
+        .summary {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            font-style: italic;
+            color: #555;
+            border-left: 4px solid #667eea;
+            margin: 0;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #667eea;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 25px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .item-date {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .item-subtitle {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .item-location {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .experience-item ul, .project-item ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .experience-item li, .project-item li {
+            margin-bottom: 6px;
+            color: #444;
+        }
+
+        .stack {
+            font-weight: 600;
+            color: #764ba2;
+            margin-top: 8px;
+        }
+
+        .skills-list {
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .tech-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .tech-category-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .languages-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .language-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #333;
+            min-width: 80px;
+        }
+
+        .language-level {
+            color: #666;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-right {
+                text-align: left;
+                width: 100%;
+            }
+
+            .contact-info a {
+                justify-content: flex-start;
+            }
+
+            .header-left h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>Kiswendsida Ulrich OUEDRAOGO</h1>
+                <div class="title">Master 2 Computer Science | Data Engineering Enthusiast</div>
+            </div>
+            <div class="header-right">
+                <div class="contact-info">
+                    <a href="mailto:ou.kiswendsida@gmail.com">
+                        <span>ou.kiswendsida@gmail.com</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+33773622518">
+                        <span>+33 07 73 62 25 18</span>
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://github.com/oulrich-ops" target="_blank">
+                        <span>oulrich-ops</span>
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/o-kiswendsida/" target="_blank">
+                        <span>o-kiswendsida</span>
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="summary">
+            Master 2 student in Computer Science – Data, Knowledge and Intelligence at Université Paris Cité. Seeking a 6-month internship starting January 2026 in Data Engineering / Modern Data Platforms. Skilled in Python, Big Data, ETL, Cloud, and data visualization. Strong interest in building scalable data platforms that create real business value.
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Education -->
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Université Paris Cité</div>
+                            <div class="item-subtitle">Master in Computer Science: Data, Knowledge and Intelligence</div>
+                            <div class="item-location">Paris, France | GPA: 3.5/4</div>
+                        </div>
+                        <div class="item-date">Sept 2024 – Present</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Polytechnic University</div>
+                            <div class="item-subtitle">Exchange Program: Cloud Computing, IoT, Web Development</div>
+                            <div class="item-location">Shanghai, China</div>
+                        </div>
+                        <div class="item-date">Sept 2023 – Dec 2023</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Université Nazi Boni</div>
+                            <div class="item-subtitle">Bachelor in Computer Science: Information Systems Engineering</div>
+                            <div class="item-location">Burkina Faso | GPA: 3.7/4</div>
+                        </div>
+                        <div class="item-date">Oct 2019 – May 2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Experience -->
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Data Engineer - Intern</div>
+                            <div class="item-subtitle">DID FRANCE - Digitalisation et Décisionnel | Lyon, France</div>
+                        </div>
+                        <div class="item-date">Jun 2025 – Aug 2025</div>
+                    </div>
+                    <ul>
+                        <li>Built and automated ETL pipelines with Airflow (daily refresh for 100+ schools)</li>
+                        <li>Optimized workflows, reducing load time by 35%</li>
+                        <li>Designed dashboards to support decision-making in education</li>
+                    </ul>
+                    <div class="stack">Stack: Python, SQL, Apache Airflow, Docker, React.js, PostgreSQL</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">ERP Developer - Final Year Internship</div>
+                            <div class="item-subtitle">Neb'Rata Consulting and Innovation SARL | Ouagadougou, Burkina Faso</div>
+                        </div>
+                        <div class="item-date">Sept 2022 – Jan 2023</div>
+                    </div>
+                    <ul>
+                        <li>Designed and implemented an accounting module on Odoo (SYSCOHADA standards)</li>
+                        <li>Improved financial data reliability and reporting</li>
+                    </ul>
+                    <div class="stack">Stack: Python, Odoo, PostgreSQL, Redmine</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Full-Stack Developer (part-time)</div>
+                            <div class="item-subtitle">DID BURKINA - Digitalisation et Décisionnel | Bobo Dioulasso, Burkina Faso</div>
+                        </div>
+                        <div class="item-date">Jan 2021 – Sept 2022</div>
+                    </div>
+                    <ul>
+                        <li>Migrated a CRM desktop system into a scalable web application</li>
+                        <li>Built REST APIs and integrated customer data analytics</li>
+                        <li>Contributed to the design of a debt recovery application</li>
+                    </ul>
+                    <div class="stack">Stack: Spring Boot, React.js, Laravel, MySQL, GitLab, Jira</div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="section">
+                <h2 class="section-title">Projects</h2>
+                
+                <div class="project-item">
+                    <div class="item-title">Big Data Pipeline – Airbnb</div>
+                    <div class="item-subtitle">Academic project, Université Paris Cité, 2025</div>
+                    <ul>
+                        <li>ETL pipeline on 2M+ rows: ingestion, processing, feature engineering, predictive modeling</li>
+                    </ul>
+                    <div class="stack">Stack: Python (Pandas, PySpark, Scikit-learn), PostgreSQL, Jupyter Notebook, Git</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-title">Football Data Pipeline (Azure)</div>
+                    <div class="item-subtitle">Academic project, 2024</div>
+                    <ul>
+                        <li>Extracted raw football data from Wikipedia using BeautifulSoup, orchestrated pipelines in the cloud, and built an interactive dashboard</li>
+                    </ul>
+                    <div class="stack">Stack: BeautifulSoup, Apache Airflow, Docker, Azure Data Lake, Azure Data Factory, Synapse, Tableau</div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-title">AutoFE - Automated Feature Engineering</div>
+                    <div class="item-subtitle">Academic project, Université Paris Cité, 2025</div>
+                    <ul>
+                        <li>Developed a Streamlit tool improving ML model accuracy by 20% (classification & regression)</li>
+                    </ul>
+                    <div class="stack">Stack: Python (Pandas, Scikit-learn, NumPy), Streamlit, Jupyter Notebook, Git</div>
+                </div>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="tech-skills">
+                    <div>
+                        <div class="tech-category-title">Programming</div>
+                        <div class="skills-list">Python, SQL, Java, JavaScript</div>
+                    </div>
+                    <div>
+                        <div class="tech-category-title">Data & Big Data</div>
+                        <div class="skills-list">Apache Airflow, PySpark, Pandas, PostgreSQL, MySQL, ETL</div>
+                    </div>
+                    <div>
+                        <div class="tech-category-title">Cloud & DevOps</div>
+                        <div class="skills-list">Azure, Docker, Git</div>
+                    </div>
+                    <div>
+                        <div class="tech-category-title">Visualization & ML</div>
+                        <div class="skills-list">Tableau, Streamlit, Scikit-learn</div>
+                    </div>
+                    <div>
+                        <div class="tech-category-title">Web Development</div>
+                        <div class="skills-list">React.js, Spring Boot, Laravel</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="section">
+                <h2 class="section-title">Soft Skills</h2>
+                <div class="skills-list">
+                    Problem-solving, Teamwork, Communication, Autonomy, Adaptability, Curiosity
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="section">
+                <h2 class="section-title">Languages</h2>
+                <div class="languages-list">
+                    <div class="language-item">
+                        <span class="language-name">French:</span>
+                        <span class="language-level">Native</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">English:</span>
+                        <span class="language-level">Professional, improving fluency (used in academic and technical contexts)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
